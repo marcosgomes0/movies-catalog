@@ -19,7 +19,6 @@ function Search() {
 
   const searchClean = search.replace("?search", "");
 
-  console.log(`${searchURL}?${key}&query=${search}`);
   React.useEffect(() => {
     async function getMovies() {
       const response = await fetch(`${searchURL}?${key}&query${searchClean}`);
