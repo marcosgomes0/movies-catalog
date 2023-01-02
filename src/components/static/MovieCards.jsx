@@ -1,7 +1,7 @@
 import { BiStar } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-import Image from "./image";
+import Image from "./Image";
 
 function MovieCards({ title, vote_average, poster_path, id }) {
   const movieURL = import.meta.env.VITE_IMG;
