@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { BiStar } from "react-icons/bi";
-import Image from "../static/image";
+import Image from "../static/Image";
 
 function Movie() {
   const [movie, setMovie] = React.useState(null);
@@ -12,19 +12,15 @@ function Movie() {
   const { id } = useParams();
 
   React.useEffect(() => {
-
     async function getMovie() {
       const response = await fetch(`${movieURL}${id}?${key}`);
       const json = await response.json();
       if (json) {
         setMovie(json);
-        document.title = json.title
+        document.title = json.title;
       }
     }
     getMovie();
-
-
-    
   }, []);
 
   return (
@@ -32,8 +28,11 @@ function Movie() {
       <div className="container mx-auto grid justify-items-center max-w-4xl p-8 md:py-28">
         {movie && (
           <div className="text-white grid md:grid-cols-2 md:gap-8 gap-4 bg-neutral-800 p-4 rounded-md">
-           <Image  src={`${imageURL}${movie.poster_path}`}
-              title={movie.id} remove={false}/>
+            <Image
+              src={`${imageURL}${movie.poster_path}`}
+              title={movie.id}
+              remove={false}
+            />
             <div className="pb-4">
               <div className="flex justify-between p-3 mb-5">
                 <h2 className="text-2xl font-bold">{movie.title}</h2>

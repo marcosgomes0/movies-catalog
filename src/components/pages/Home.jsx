@@ -8,7 +8,7 @@ function Home() {
 
   const [movies, setMovies] = React.useState([]);
 
-  document.title = "Home"
+  document.title = "Home";
 
   React.useEffect(() => {
     async function getMovies() {

@@ -12,10 +12,9 @@ function Search() {
 
   const { search } = location;
 
-  const params = new URLSearchParams(location.search)
-  const busca = params.get('search')
-  document.title = busca
-
+  const params = new URLSearchParams(location.search);
+  const busca = params.get("search");
+  document.title = busca;
 
   const searchClean = search.replace("?search", "");
 
@@ -37,7 +36,8 @@ function Search() {
   return (
     <section className="bg-neutral-900 py-8">
       <h2 className="container mx-auto text-center text-2xl sm:text-4xl mb-12 text-white font-bold">
-       Resultados para: <span className="text-yellow-400">{busca && busca}</span>
+        Resultados para:{" "}
+        <span className="text-yellow-400">{busca && busca}</span>
       </h2>
       <div className="container mx-auto">
         <ul className="grid px-5 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-8 text-white">
