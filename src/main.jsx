@@ -6,7 +6,7 @@ import App from "./App";
 import Home from "./components/pages/Home";
 import Movie from "./components/pages/Movie";
 import Search from "./components/pages/Search";
-import Error404 from "./components/static/Error404";
+import Error from "./components/static/Error";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Home />} />
           <Route path="/movie/:id" element={<Movie />} />
           <Route path="/search/:search" element={<Search />} />
-          <Route path="*" element={<Error404 />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </Router>
