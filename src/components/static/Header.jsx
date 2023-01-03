@@ -8,7 +8,8 @@ function Header() {
 
   const navigate = useNavigate();
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault()
     navigate(`search/${search}`);
   }
 
