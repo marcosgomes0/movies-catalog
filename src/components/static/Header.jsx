@@ -10,6 +10,9 @@ function Header() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    if (search.length < 1){
+      return
+    }
     navigate(`search/${search}`);
   }
 
