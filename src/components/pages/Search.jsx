@@ -30,7 +30,7 @@ function Search() {
       }
     }
     getMovies();
-  }, []);
+  }, [search]);
 
   return (
     <section className="bg-neutral-900 py-8">
