@@ -21,7 +21,7 @@ function Movie() {
       }
     }
     getMovie();
-  }, []);
+  }, [id]);
 
   return (
     <section className="bg-neutral-900">
