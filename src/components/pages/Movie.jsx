@@ -23,6 +23,8 @@ function Movie() {
     getMovie();
   }, [id]);
 
+
+
   return (
     <section className="bg-neutral-900">
       <div className="container mx-auto grid justify-items-center max-w-4xl p-8 md:py-28">
@@ -68,11 +70,11 @@ function Movie() {
                 </p>
                 <p>
                   <span className="font-semibold">Orcamento: </span>
-                  {movie.budget} USD
+                  {movie.budget.toLocaleString('en-US',{style: 'currency', currency: 'USD'})} USD
                 </p>
                 <p>
                   <span className="font-semibold">Arrecadação: </span>
-                  {movie.revenue} USD
+                  {movie.revenue.toLocaleString('en-US',{style: 'currency', currency: 'USD'})} USD
                 </p>
               </div>
             </div>
